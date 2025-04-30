@@ -11,6 +11,7 @@ const nextConfig = {
       },
     ],
   },
+  // output: "export",  // Image Optimization using the default loader is not compatible with this configuration
 };
 
 export default nextConfig;
