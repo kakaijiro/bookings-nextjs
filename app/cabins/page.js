@@ -2,6 +2,8 @@ import { Suspense } from "react";
 import CabinList from "@/app/_components/CabinList";
 import Spinner from "@/app/_components/Spinner";
 
+export const revalidate = 3600; // in sec // it must be a static number // this is suitable for a site that's not frequently updated, say once an hour.
+
 export const metadata = {
   title: "Cabins",
 };
