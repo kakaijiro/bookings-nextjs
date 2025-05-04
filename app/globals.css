@@ -25,3 +25,9 @@ body {
     text-wrap: balance;
   }
 }
+
+/* @layer utilities {
+  .rdp-multiple_months .rdp-months {
+    @apply flex flex-row gap-8;
+  }
+} */
