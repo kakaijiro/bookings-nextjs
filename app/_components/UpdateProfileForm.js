@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
-import { useFormStatus } from "react-dom";
+// import { useFormStatus } from "react-dom";
 import { updateGuest } from "../_lib/actions";
-import SpinnerMini from "./SpinnerMini";
+// import SpinnerMini from "./SpinnerMini";
+import { SubmitButton } from "./SubmitButton";
 
 function UpdateProfileForm({ guest, children }) {
   const [count, setCount] = useState(0);
@@ -56,24 +57,24 @@ function UpdateProfileForm({ guest, children }) {
       </div>
 
       <div className="flex items-center justify-end gap-6">
-        <Button />
+        <SubmitButton>Update profile</SubmitButton>
       </div>
     </form>
   );
 }
 
 // The hook useFormStatus only works if it's rendered inside the form that invokates a server action, that is, to get status of a server action is different from other components. Furthermore, because it's a hook, it must be a clinet component, that is "use client" must be decleared. If this file were for a server component, the componet Button should be defined in a separate file and be imported.
-function Button() {
-  const { pending } = useFormStatus();
+// function Button() {
+//   const { pending } = useFormStatus();
 
-  return (
-    <button
-      className="flex min-h-16 w-48 items-center justify-center bg-accent-500 px-8 py-4 font-semibold text-primary-800 transition-all hover:bg-accent-600 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-gray-300"
-      disabled={pending}
-    >
-      {pending ? <SpinnerMini /> : "Update profile"}
-    </button>
-  );
-}
+//   return (
+//     <button
+//       className="flex min-h-16 w-48 items-center justify-center bg-accent-500 px-8 py-4 font-semibold text-primary-800 transition-all hover:bg-accent-600 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-gray-300"
+//       disabled={pending}
+//     >
+//       {pending ? <SpinnerMini /> : "Update profile"}
+//     </button>
+//   );
+// }
 
 export default UpdateProfileForm;
