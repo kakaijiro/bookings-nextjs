@@ -9,7 +9,6 @@ The Wild Oasis is a luxurious cabin booking platform built with [Next.js](https:
 - **Reservation Management**: Make, edit, and delete reservations with real-time updates.
 - **Dynamic Filtering**: Filter cabins by capacity (small, medium, large).
 - **Responsive Design**: Fully optimized for desktop and mobile devices.
-- **Dark Mode Support**: Automatically adapts to the user's system preferences.
 - **Server Actions**: Leverages Next.js server actions for efficient data handling.
 
 ## Tech Stack
